@@ -1,24 +1,15 @@
-node
-
-{
+node{
     
-stage('scm') 
-
-{
+stage('scm') {
     
 // some block
      
 git 'https://github.com/Madhu-Varma/game-of-life.git'
 
 
-
-
 }
  
-
-stage('packaging')
-
-{
+stage('packaging'){
       
 sh 'mvn package'
      
@@ -26,4 +17,6 @@ sh 'mvn package'
 }
  
  
+
+
 }
