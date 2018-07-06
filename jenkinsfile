@@ -1,22 +1,22 @@
-node{
-    
-stage('scm') {
-    
-// some block
-     
-git 'https://github.com/Madhu-Varma/game-of-life.git'
+node
+{
+    stage('scm') {
+        git 'https://github.com/Madhu-Varma/game-of-life.git'
 
 
+    // some block
 }
- 
-stage('packaging'){
-      
-sh 'mvn package'
-     
- 
+    
+   
+stage('mvn package') {
+sh 'mvn package'    // some block
 }
- 
- 
+stage('archiveArtifacts') {
+    // some block
+  archiveArtifacts 'gameoflife-web\\target\\*.war'
+
+}
+
 
 
 }
